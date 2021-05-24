@@ -1,0 +1,26 @@
+.carousal{
+    height: 200px;
+    overflow:visible;
+}
+.adv{
+    width: 100%;
+    z-index: -1;
+}
+.checkout{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: max-content;
+}
+.checkout .checkout__left{
+    width: 70vw;
+    background-color: white;
+}
+.checkout__right{
+    width: 25vw;
+}
+.checkout__title{
+    margin-right: 10px;
+    padding:10px;
+    border-bottom:1px solid lightgray;
+}
