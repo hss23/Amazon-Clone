@@ -4,8 +4,9 @@ import { useStateValue } from '../StateProvider'
 import "./Checkout.css"
 import CheckoutProduct from './CheckoutProduct'
 import Subtotal from './Subtotal'
+import FlipMove from 'react-flip-move'
 const Checkout = () => {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
     return (
         <div className="checkout">
             {/* <div className="carousal">
@@ -13,8 +14,11 @@ const Checkout = () => {
             </div> */}
             <div className="checkout__left">
                 <div className="checkout__title">
+                    <h3>Checkout {user ? user.email : 'Guest'}</h3>
                     <h2>Shopping Cart</h2>
+
                 </div>
+
                 {
                     basket.map((item) => (
                         <CheckoutProduct
@@ -30,6 +34,7 @@ const Checkout = () => {
             <div className="checkout__right">
                 <Subtotal />
             </div>
+
         </div>
     )
 }
